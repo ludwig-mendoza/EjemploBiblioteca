@@ -1,0 +1,42 @@
+<div class="new-post-container">
+    <form [formGroup]="editPostForm" (ngSubmit)="editPost(editPostForm.value)">
+      <mat-form-field>
+        <mat-label>ID del estudiante</mat-label>
+        <input matInput placeholder="ID del estudiante" formControlName="id_student">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Nombre" formControlName="name">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Apellido paterno</mat-label>
+        <input matInput placeholder="Apellido paterno" formControlName="lastname_p">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Apellido materno</mat-label>
+        <input matInput placeholder="Apellido materno" formControlName="lastname_m">
+      </mat-form-field>
+
+      <mat-form-field class="primero">
+        <mat-select placeholder="Grado" multiple formControlName="grade">
+          <mat-option value="1">1</mat-option>
+          <mat-option value="2">2</mat-option>
+          <mat-option value="3">3</mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+      <mat-form-field class="segundo">
+      <mat-select placeholder="Grupo" multiple formControlName="group">
+        <mat-option value="A">A</mat-option>
+        <mat-option value="B">B</mat-option>
+        <mat-option value="C">C</mat-option>
+        <mat-option value="D">D</mat-option>
+      </mat-select>
+    </mat-form-field >
+
+      <div class="container-button">
+        <input type="submit" class="mat-flat-button" value="Guardar" color="green" [mat-dialog-close]="true">
+      </div>
+    </form>
+  </div>
+  

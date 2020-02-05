@@ -1,0 +1,20 @@
+   
+<div class="container">
+   
+    <div class="card">
+      <img matCardImage [src]="post.cover" />
+
+      <h4>{{ post.name }}</h4>
+
+      <mat-chip-list>
+        <mat-chip *ngFor="let tag of post.category" [ngClass]="tag">
+         <p>{{ tag }}</p> 
+        </mat-chip>
+      </mat-chip-list>
+      
+      <br>
+      <a [routerLink]="['/post', post.id]">
+      Leer más</a>
+    </div>
+    
+</div>
